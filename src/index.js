@@ -1,26 +1,17 @@
-// Test import of a JavaScript module
-import { example } from '@/js/example'
-
-// Test import of an asset
-import webpackLogo from '@/images/webpack-logo.svg'
+import Detector from '@/js/utils/detector';
+import Main from '@/js/app/main';
 
 // Test import of styles
-import '@/styles/index.scss'
+import '@/styles/index.scss';
 
-// Appending to the DOM
-const logo = document.createElement('img')
-logo.src = webpackLogo
+function init(){
+    //Check for webGL capabilities
+    if(!Detector.webgl){
+        Detector.addGetWebGLMessage();
+    } else {
+        const container = document.getElementById("root");
+        new Main(container);
+    }
+}
 
-const heading = document.createElement('h1')
-heading.textContent = example()
-
-// Test a background image url in CSS
-const imageBackground = document.createElement('div')
-imageBackground.classList.add('image')
-
-// Test a public folder asset
-const imagePublic = document.createElement('img')
-imagePublic.src = '/assets/example.png'
-
-const app = document.querySelector('#root')
-app.append(logo, heading, imageBackground, imagePublic)
+init();
