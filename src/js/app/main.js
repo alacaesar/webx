@@ -19,8 +19,27 @@ import Config from '../data/config';
 import vars from './tools/vars';
 import Events from './tools/events';
 
+// Shaders
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
+import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { FXAAShader } from 'three/examples/jsm/shaders/FXAAShader.js';
+import { FilmGrainShader } from './shaders/FilmGrainShader';
+import { LensDistortionShader } from './shaders/LensDistortionShader';
+
+var composer,
+    renderPass,
+    distortPass,
+    grainPass,
+    fxaaPass,
+    glitchPass;
+
 // Custom
-import Sample from './elements/sample';
+import Face from './elements/face';
+
+
+let animals = ["fox", "bear", "chinchilla", "seal", "mink", "racoon"], k = 0, first = true;
 
 export default class Main {
   constructor(container) {
@@ -31,8 +50,14 @@ export default class Main {
 
     this.clock = new THREE.Clock();
 
+    // Events manager
+    this.events = new Events();
+    this.events.init();
+
     this.scene = new THREE.Scene();
     this.scene.fog = new THREE.FogExp2(Config.fog.color, Config.fog.near);
+
+    vars.scene = this.scene;
 
     // Get Device Pixel Ratio first for retina
     if(window.devicePixelRatio) {
@@ -47,12 +72,9 @@ export default class Main {
     this.light = new Light(this.scene);
 
     // Create and place lights in scene
-    const lights = ['ambient', 'directional', 'point', 'hemi'];
-    lights.forEach((light) => this.light.place(light));
-
-    // Events manager
-    this.events = new Events();
-    this.events.init();
+    //const lights = ['ambient', 'directional', 'point', 'hemi'];
+    const lights = ['directional'];
+    //lights.forEach((light) => this.light.place(light));
 
     // Dev perpose stats
     if(Config.isDev){
@@ -60,6 +82,38 @@ export default class Main {
       document.body.appendChild(this.stats.dom);
       vars.loopFunctions.push([()=> this.stats.update(), "UPDATE_STATS"]);
     }
+
+    // Render Pass Setup
+    renderPass = new RenderPass( this.scene, this.camera.threeCamera );
+    grainPass = new ShaderPass( FilmGrainShader );
+    fxaaPass = new ShaderPass( FXAAShader );
+    distortPass = new ShaderPass( LensDistortionShader );
+    glitchPass = new GlitchPass();
+    //glitchPass.goWild = true;
+    glitchPass.curF = 10;
+
+    glitchPass.material.uniforms.distortion_x.value = 0.0;
+    glitchPass.material.uniforms.distortion_y.value = 0.0;
+
+    console.log(glitchPass.material.uniforms.amount.value);
+
+    composer = new EffectComposer( this.renderer.threeRenderer );
+    composer.setSize( window.innerWidth, window.innerHeight );
+    composer.setPixelRatio( window.devicePixelRatio );
+    composer.addPass( renderPass );
+    composer.addPass( fxaaPass );
+    //composer.addPass( glitchPass );
+    composer.addPass( distortPass );
+    composer.addPass( grainPass );
+    
+
+    setTimeout(() => {
+      //composer.removePass( glitchPass );
+    }, 2000);
+
+    distortPass.material.uniforms.baseIor.value = 0.99;
+    distortPass.material.uniforms.bandOffset.value = 0.003;
+    grainPass.material.uniforms.intensity.value = 0.08;
 
     this.init();
 
@@ -73,17 +127,66 @@ export default class Main {
 
       this.render();
     }
+
   }
 
   init(){
-    const sample = new Sample();
+
+    //animals.sort(() => (Math.random() > 0.5) ? 1 : -1)
+    
+    this.face = new Face();
+    vars.face = this.face;
+
+    this.refresh();
+  }
+
+  refresh() {
+    const _this = this;
+
+    if(!vars.isPauseGlitch){
+      composer.addPass( glitchPass );
+
+      this.face.refresh(
+        "assets/animals/"+ animals[k] +".jpg", 
+        ()=>{ 
+          setTimeout(function(){ 
+            glitchPass.goWild = false;
+            distortPass.material.uniforms.bandOffset.value = 0.003; 
+          }, 200); 
+          setTimeout(function(){ 
+            composer.removePass( glitchPass );
+          }, 2000);
+
+          if(first){
+            first = false;
+            _this.face.randomize(3333);
+            _this.face.build( _this.intro );
+          }
+
+          if(k == animals.length - 1) k = 0;
+          else k++;
+          
+        },
+        ()=>{
+          if(!first) glitchPass.goWild = true;
+          distortPass.material.uniforms.bandOffset.value = 0.02; 
+        }
+      );
+      setTimeout(function(){ _this.refresh(); }, 4000 + Math.random() * 4000 );
+    }
+  }
+
+  intro(){
+    //vars.isPauseGlitch = true;
+    document.body.classList.remove("hold");
   }
 
   render() {
     this.onAnimationFrame();
     // RAF
-    if(!vars.isPaused)
+    if(!vars.isPaused){
       requestAnimationFrame(this.render.bind(this)); // Bind the main class instead of window object
+    }
   }
 
   onAnimationFrame(){
@@ -91,7 +194,9 @@ export default class Main {
     const _this = vars.main;
 
     // Call render function and pass in created scene and camera
-    _this.renderer.render(_this.scene, _this.camera.threeCamera);
+    //_this.renderer.render(_this.scene, _this.camera.threeCamera);
+
+    composer.render();
 
     const delta = _this.clock.getDelta();
 
