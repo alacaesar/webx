@@ -1,10 +1,10 @@
 // This object contains the state of the app
 export default {
-    isDev: false,
+    isDev: true,
     isVREnabled: false,
     maxAnisotropy: 1,
     fog: {
-        color: 0x000000,
+        color: 0x003DB2,
         near: 0.002
     },
     camera: {
@@ -29,7 +29,7 @@ export default {
         maxAzimuthAngle: Infinity,
         enableDamping: true,
         dampingFactor: 0.5,
-        enableZoom: false,
+        enableZoom: true,
         target: {
             x: 0,
             y: 0,

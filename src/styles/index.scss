@@ -1,23 +1,8 @@
 @font-face {
-  font-family: "MG";
-  src: url("../fonts/ABCMonumentGrotesk-Regular-Trial.woff2") format("woff2"),
-       url("../fonts/ABCMonumentGrotesk-Regular-Trial.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Vela";
-  src: url("../fonts/VelaSans-GX.ttf");
-}
-
-@font-face {
-  font-family: "RM";
-  src: url('../fonts/RobotoMono-Regular.ttf');
+  font-family: 'Inter';
+  src: url('../fonts/Inter.ttf');
 }
 
 @import 'normalize';
 @import 'variables';
 @import 'main';
-
-
-/* External */
-@import "https://cdn.plyr.io/3.7.2/plyr.css";
