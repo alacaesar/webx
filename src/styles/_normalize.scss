@@ -5,8 +5,18 @@ html {
   body {
     margin: 0;
     font: 16px/1 sans-serif;
+    
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:none;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility!important;
+    -moz-osx-font-smoothing:grayscale!important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0.05);
+    text-rendering: geometricPrecision;
+    
   }
   h1,
   h2,
@@ -16,7 +26,7 @@ html {
   blockquote,
   figure,
   ol,
-  ul {
+  ul, dl, dt{
     margin: 0;
     padding: 0;
   }

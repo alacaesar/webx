@@ -1,0 +1,87 @@
+{
+    "collection":[
+        {
+            "name": "ITEM 001",
+            "url": "#",
+            "video": "assets/videos/01.mp4",
+            "images": ["assets/drops/01.jpg"],
+            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "designer": 0
+        },
+        {
+            "name": "ITEM 002",
+            "url": "#",
+            "video": "assets/videos/02.mp4",
+            "images": ["assets/drops/02.jpg"],
+            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "designer": 1
+        },
+        {
+            "name": "ITEM 003",
+            "url": "#",
+            "video": "assets/videos/03.mp4",
+            "images": ["assets/drops/03.jpg"],
+            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "designer": 2
+        },
+        {
+            "name": "ITEM 004",
+            "url": "#",
+            "video": "assets/videos/04.mp4",
+            "images": ["assets/drops/04.jpg"],
+            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "designer": 3
+        },
+        {
+            "name": "ITEM 005",
+            "url": "#",
+            "video": "assets/videos/05.mp4",
+            "images": ["assets/drops/05.jpg"],
+            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "designer": 3
+        }
+    ],
+
+    "designers":[
+        {
+            "id": 0,
+            "name": "Jessica R Amory",
+            "dept": "UAL: London College of Fashion",
+            "bio": "Jessica R Amory is a British/Nevisian technical Streetwear and 3d concept designer based in London. Amory studied technical Sportswear design at UAL: London College of Fashion, before graduating in 2018 to pursue a career in the Marine and Defence sector as a New Product Development Designer for Survivalists wear. During this time, Jessica learnt digital and creative techniques which led to her interest in 3d design technologies and outputs. Currently in the process of completing her Master’s in Digital Fashion, the first course of its kind, her hopes for the future are to create Virtual reality- to- reality collaborative concept designs and animations across different genres.",
+            "photo": "assets/designers/jessi.jpg",
+            "links": [
+                {"type":"instagram", "url":"https://www.instagram.com/jessi_ammo/"},
+                {"type":"Linkedin", "url":"https://www.linkedin.com/in/jessi-r-amory-503049115/"}
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Denise Maissonave",
+            "dept": "Womenswear Course",
+            "bio": "Denise Maissonave is a 24 year old fashion student from Buenos Aires, Argentina. Having moved to London in 2019 and currently enrolled in University of Westminster's womenswear course, her work frequently portrays personal memories of her upbringings in South America, born into a family of Franco-Italian immigrants.",
+            "photo": "assets/designers/denise.jpg",
+            "links": [
+                {"type":"instagram", "url":"https://www.instagram.com/denitsze/"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Isabel Ealand",
+            "dept": "Fashion Design BA",
+            "bio": "I am a British, 20 year old, Fashion Design BA (Hons) student and have just completed my second year at the University of Westminster.",
+            "photo": "assets/designers/isabel.jpg",
+            "links": []
+        },
+        {
+            "id": 3,
+            "name": "Blythe Brunt",
+            "dept": "Fashion Design BA",
+            "bio": "I am a 21 year old Fashion Design student from London currently studying at the University of Westminster. My work can be characterised by bold patterns, and strong silhouettes. European history and 20th century art is a big inspiration, and I love to reimagine historical clothing and modernist art as contemporary fashion. Sustainability is at the heart of all my practices and I use a lot of deadstock and upcycled fabrics in my work. I am fascinated by the relationship that fashion has with emerging technology and have previously used methods such as 3D Printing to create work, but am particularly excited about the rise of virtual fashion and the impact that it is going to have on the industry.",
+            "photo": "assets/designers/blythe.jpg",
+            "links": [
+                {"type":"instagram", "url":"https://www.instagram.com/verityblythe/"},
+                {"type":"website", "url":"https://www.verityblythe.com/"}
+            ]
+        }
+    ]
+}
