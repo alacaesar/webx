@@ -95,8 +95,6 @@ export default class Main {
     glitchPass.material.uniforms.distortion_x.value = 0.0;
     glitchPass.material.uniforms.distortion_y.value = 0.0;
 
-    console.log(glitchPass.material.uniforms.amount.value);
-
     composer = new EffectComposer( this.renderer.threeRenderer );
     composer.setSize( window.innerWidth, window.innerHeight );
     composer.setPixelRatio( window.devicePixelRatio );

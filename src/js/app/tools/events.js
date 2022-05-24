@@ -92,7 +92,7 @@ export default class Events {
   }
 
   onWindowResize(){
-    console.log(vars.windowSize.width);
+    
     if( vars.windowSize.width < 1000){
       vars.isMobile = true;
       document.body.classList.add("mobile");

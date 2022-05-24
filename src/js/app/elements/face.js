@@ -87,6 +87,17 @@ export default class Face {
 
     update(p){
 
+        if(p >= .98 || p <= .01 ){
+            vars.isPauseLoopFunctions = true;
+            vars.isPauseGlitch = true;
+        }else{
+            if(vars.isPauseGlitch == true){
+                vars.isPauseGlitch = false;
+                vars.main.refresh();
+            }
+            vars.isPauseLoopFunctions = false;
+        }
+
         for(var i=0; i<pixels.length; ++i){
             let pixel = pixels[i];
             let angle = pixel._angle * THREE.Math.DEG2RAD;

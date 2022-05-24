@@ -1,3 +1,5 @@
+import vars from "../tools/vars";
+
 let body, header;
 
 export default class Builder {
@@ -10,7 +12,6 @@ export default class Builder {
     }
 
     init(callback) {
-        console.log("build");
         const _this = this;
 
         fetch("data.json")
@@ -24,6 +25,10 @@ export default class Builder {
             setTimeout(()=>{ if(callback) callback(); }, 111);
         
         });
+
+        if(!vars.isMobile){
+            header.classList.add("extended");
+        }
     }
 
     makeCollection(arr){

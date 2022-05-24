@@ -36,33 +36,36 @@ export default class Root {
             vars.face.update(e.progress);
           }
         }
-      })
+      });
 
-      /*
+      
         gsap.timeline({
             scrollTrigger: {
               trigger: "#about",
               start: "top+=200 bottom",
               onEnter: ()=>{
                   body.classList.add("scroll");
-                  if(!vars.isMobile) header.classList.remove("extended"); 
-                  vars.face.disintegrate(true); 
-                  vars.isPauseLoopFunctions = true;
+                  if(!vars.isMobile) header.classList.remove("extended");
                 },
               onLeaveBack: ()=>{ 
                   body.classList.remove("scroll");
-                  if(!vars.isMobile) header.classList.add("extended"); 
-                  vars.face.disintegrate(false); 
-                  vars.isPauseLoopFunctions = false; 
+                  if(!vars.isMobile) header.classList.add("extended");
                 }
             }
         });
-        */
+        
 
         gsap.timeline({
             scrollTrigger: {
               trigger: "#ngo",
-              start: "top+=200 bottom",
+              start: "top bottom",
+              end: "bottom-=15% bottom",
+              onUpdate: (e) => {
+                
+                vars.face.update( 1 - e.progress );
+                
+              }
+              /*
               onEnter: ()=>{
                   vars.face.disintegrate(false); 
                   vars.isPauseLoopFunctions = false;
@@ -71,6 +74,7 @@ export default class Root {
                   vars.face.disintegrate(true); 
                   vars.isPauseLoopFunctions = true; 
                 }
+                */
             }
         });
 
