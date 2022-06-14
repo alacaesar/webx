@@ -1,0 +1,341 @@
+
+#nft{
+    .first{
+        display: flex;
+        .left{
+            width: 100vh;
+            max-width: 50%;
+            height: 100vh;
+            padding: 0;
+
+            figure{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                font-size: 0;
+            }
+
+            video{
+                    height: 100%;
+                    width: 100vh; /* 100 * 482 * 482 */
+                    min-width: 100%;
+                    min-height: 50vw;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+            }
+        }
+
+        .right{
+            text-align: left;
+            position: relative;
+            padding: 0 60px;
+            
+
+            .panel{
+                padding-top: 160px;
+                box-sizing: border-box;
+                height: calc(100vh - 140px);
+
+                .close{
+                    left: auto;
+                    right: 40px;
+                    top: 40px;
+                    position: fixed;
+                }
+            }
+
+            .title{
+                padding: 16px 0;
+                max-width: 920px;
+
+                h1.name{
+                    color: $red;
+                    display: inline-block;
+
+                    svg{
+                        vertical-align: middle;
+                        margin: 0 10px;
+                    }
+                }
+                p{
+                    display: inline;
+                }
+                i{ 
+                    font-size: 14px; 
+                    color: $pink;
+                }
+
+                div{
+                    padding: 60px 0 0 0;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                        vertical-align: middle;
+                        margin-right: 16px;
+                    }
+
+                    &.designer{
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .second{
+        position: relative;
+        background-color: $darker;
+        padding: 100px 60px;
+        overflow: hidden;
+
+        ul{
+            display: flex;
+            padding-top: 8vw;
+
+            li{
+                position: relative;
+            }
+
+            li:nth-child(1){ min-width: calc($ns/2); }
+            li:nth-child(2){ min-width: calc($ns/2); margin:calc($ns/2) 0 0 0; z-index: 1; }
+            li:nth-child(3){ min-width: $ns; margin:calc($ns/4) 0 0 calc($ns/4*-1); }
+            li:nth-child(4){ min-width: calc($ns/2); margin:0 0 0 calc($ns/8*-1); z-index: 2; }
+            li:nth-child(5){ min-width: $ns; margin:calc($ns/4*-1) 0 0 calc($ns/4*-1); z-index: 1; }
+            li:nth-child(6){ min-width: $ns; margin:calc($ns/4) 0 0 calc($ns/8*-1); }
+            li:nth-child(7){ min-width: calc($ns/2); margin:0 0 0 calc($ns/8*-1); z-index: 1; }
+        }
+    }
+
+    .third{
+        display: flex;
+        background-color: $darker;
+
+        .left{ 
+            flex: 1; 
+            text-align: right;
+            padding: 60px;
+        }
+        .right{
+            flex: 1;
+            text-align: left;
+            padding: 60px;
+            min-height: 300px;
+
+            ul{
+                margin: 60px 0;
+                li{
+                    margin: 10px 0;
+                }
+            }
+        }
+        img{
+            border-radius: 50%;
+            width: 140px;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile){
+        .first{
+            flex-direction: column-reverse;
+            
+            .left{
+                width: 100%;
+                max-width: none;
+                padding: 0;
+                max-height: 100vw;
+            }
+
+            .right{
+                padding: 50px 30px;
+
+                .panel{
+                    height: auto;
+                    padding: 80px 0 50px 0;
+
+                    .close{
+                        right: 0px;
+                    }
+                }
+            }
+        }
+
+        .second{
+            padding: 0px;
+
+            .copy{
+                padding: 80px 30px;
+            }
+
+            .slide{
+                overflow-x: auto;
+            }
+
+            ul{
+                display: flex;
+                padding-top: 0;
+    
+                li{
+                    min-width: 80vw !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .third{
+            flex-direction: column;
+            
+            .left{
+                padding: 60px 30px 0 30px;
+                text-align: left;
+
+                img{
+                    width: 64px;
+                }
+            }
+
+            .right{
+                padding: 30px;
+            }
+        }
+    }
+}
+
+
+#interview{
+
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 60px 200px;
+
+
+        .top{
+            position: relative;
+            min-width: 100%;
+            padding: 120px 0 0 0;
+            .close{
+                position: fixed;
+                left:auto;
+                right: 60px;
+                transform: translate(0,0);
+            }
+        }
+
+        .left{
+            flex: 1;
+            
+            .copy{
+                max-width: 680px;
+                padding-right: 80px;
+            }
+            h3{
+                font-size: 32px;
+                line-height: 120%;
+                margin-top: 40px;
+            }
+            p{
+                margin: 10px 0;
+            }
+            i{
+                color: $pink;
+                opacity: .5;
+                padding-top: 30px;
+            }
+
+        }
+        .right{
+            text-align: left;
+            max-width: 260px;
+            margin-top: 40px;
+
+            p{
+                padding: 20px 0;
+            }
+            
+        }
+    }
+
+    figure{
+        position: relative;
+        display: inline-block;
+        
+        svg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile){
+        .first{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            margin: 0 30px 100px;
+    
+            .top{
+                order: 1;
+                position: relative;
+                min-width: 100%;
+                padding: 120px 0 0 0;
+                .close{
+                    position: fixed;
+                    left:auto;
+                    right: 30px;
+                }
+            }
+
+            .left{
+                .copy{
+                    padding: 0;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 120%;   
+                }
+                i{
+                    font-size: 12px;
+                }
+            }
+
+            .right{
+                display: flex;
+                max-width: none;
+                position: relative;
+                padding: 20px 0;
+
+                &::after, &::before {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: #E4CBCB;
+                    opacity: 0.4;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after{
+                    top: auto;
+                    bottom: 0;
+                }
+
+                figure{
+                    max-width: 80px;
+                    margin-right: 20px;
+                }
+
+                p{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

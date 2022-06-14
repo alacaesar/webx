@@ -1,6 +1,10 @@
 import * as THREE from 'three';import vars from "./vars";
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import anime from 'animejs';
 import Plyr from 'plyr';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 // Controls based on orbit controls
 export default class Events {
@@ -9,19 +13,98 @@ export default class Events {
   }
 
   init() {
-      
-    window.addEventListener("blur", () => { vars.isPaused = true; });
-    window.addEventListener("focus", () => {
-          vars.isPaused = false; 
-          vars.main.render();
-    });
 
-    document.addEventListener("mousemove", (e)=> this.onMouseMoveHandler(e), false);
+    let _this = this;
+
+    if(pageType == "home"){
+      window.addEventListener("blur", () => { vars.isPaused = true; });
+      window.addEventListener("focus", () => {
+            vars.isPaused = false; 
+            vars.main.render();
+      });
+
+      document.addEventListener("mousemove", (e)=> this.onMouseMoveHandler(e), false);
+
+      this.initPlayerEvents();
+      this.panAnimation();
+      this.initMenuLinks();
+    }
 
     document.querySelector(".menuTrigger").addEventListener("click", (e)=>{
       document.querySelector("header").classList.toggle("extended"); 
     });
+
+    this.initCreditsEvents();
+    this.onWindowResize();
+
+  }
+
+  onWindowResize(){
     
+    if( window.innerWidth < 1000){
+      vars.isMobile = true;
+      document.body.classList.add("mobile");
+    }else{
+      vars.isMobile = false;
+      document.body.classList.remove("mobile");
+    }
+  }
+
+  onMouseMoveHandler(e){
+    vars.mouseCoords = {
+      x:(e.clientX-vars.windowSize.width * .5) / vars.windowSize.width, 
+      y:(e.clientY-vars.windowSize.height * .5) / vars.windowSize.height
+    };
+  }
+
+  panAnimation(){
+    vars.loopFunctions.push([() => {
+
+      const scene = vars.scene;
+      const plane = vars.plane;
+
+      scene.rotation.y = THREE.MathUtils.lerp(scene.rotation.y, (vars.mouseCoords.x * Math.PI) / 10, 0.05);
+      scene.rotation.x = THREE.MathUtils.lerp(scene.rotation.x, (vars.mouseCoords.y * Math.PI) / 10, 0.07);
+
+      plane.rotation.y = THREE.MathUtils.lerp(plane.rotation.y, (vars.mouseCoords.x * Math.PI) / 40, 0.05);
+      plane.rotation.x = THREE.MathUtils.lerp(plane.rotation.x, (vars.mouseCoords.y * Math.PI) / 40, 0.05);
+
+      //_this.box.rotation.y += .010;
+    }, "PAN_ANIMATION"]);
+  }
+
+  initMenuLinks(){
+    let menuLinks = document.querySelectorAll("nav a.link");
+
+    for(var i=0; i<menuLinks.length; ++i){
+      let link = menuLinks[i];
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let t_name = e.target.getAttribute("href");
+
+        if(vars.isMobile)
+          document.querySelector("header").classList.remove("extended");
+
+        let destination = document.querySelector(t_name);
+        if(destination){
+          gsap.to(window, {
+            scrollTo: {y: destination.offsetTop - 35, autoKill: false},
+            duration: 1
+          });
+        }
+
+
+      });
+    }
+  }
+
+  onInternalLinkClick(e){
+    e.preventDefault();
+    console.log(e);
+  }
+
+  initPlayerEvents(){
     let videoTrigger = document.querySelector(".video");
     let videoClose = document.querySelector(".player .close");
     let player = document.querySelector(".player");
@@ -80,50 +163,27 @@ export default class Events {
       
     });
 
-
-
     this.plyr = new Plyr("#plyr", {
       controls:['play','progress']
     });
-
-
-    this.panAnimation();
-
   }
 
-  onWindowResize(){
+  initCreditsEvents(){
+    let credits = document.querySelector(".credits");
+    let creditsTrigger = document.querySelector(".credits-trigger");
+    let creditsClose = document.querySelector(".credits .close");
     
-    if( vars.windowSize.width < 1000){
-      vars.isMobile = true;
-      document.body.classList.add("mobile");
-    }else{
-      vars.isMobile = false;
-      document.body.classList.remove("mobile");
-    }
+    creditsTrigger.addEventListener("click", ()=>{
+      credits.classList.add("on");
+      setTimeout(() => {
+        document.body.classList.add("credits-open");
+      }, 888);
+    });
+
+    creditsClose.addEventListener("click", ()=>{
+      credits.classList.remove("on");
+      document.body.classList.remove("credits-open");
+    });
   }
-
-  onMouseMoveHandler(e){
-    vars.mouseCoords = {
-      x:(e.clientX-vars.windowSize.width * .5) / vars.windowSize.width, 
-      y:(e.clientY-vars.windowSize.height * .5) / vars.windowSize.height
-    };
-  }
-
-  panAnimation(){
-    vars.loopFunctions.push([() => {
-
-      const scene = vars.scene;
-      const plane = vars.plane;
-
-      scene.rotation.y = THREE.MathUtils.lerp(scene.rotation.y, (vars.mouseCoords.x * Math.PI) / 10, 0.05);
-      scene.rotation.x = THREE.MathUtils.lerp(scene.rotation.x, (vars.mouseCoords.y * Math.PI) / 10, 0.07);
-
-      plane.rotation.y = THREE.MathUtils.lerp(plane.rotation.y, (vars.mouseCoords.x * Math.PI) / 40, 0.05);
-      plane.rotation.x = THREE.MathUtils.lerp(plane.rotation.x, (vars.mouseCoords.y * Math.PI) / 40, 0.05);
-
-      //_this.box.rotation.y += .010;
-  }, "PAN_ANIMATION"]);
-  }
-
   
 }

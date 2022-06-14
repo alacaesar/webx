@@ -33,7 +33,7 @@
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.4.2",
     "postcss-loader": "^6.2.0",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.7.1",
     "prettier": "^2.4.1",
     "sass": "^1.43.5",
     "sass-loader": "^12.2.0",

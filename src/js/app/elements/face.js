@@ -18,7 +18,7 @@ export default class Face {
       this.scene = vars.main.scene;
       this.init();
     }
-  
+
     init() {
 
         const _this = this;
@@ -67,7 +67,7 @@ export default class Face {
       
             const pixel = new THREE.Mesh(
               pixelGeometry, 
-              new THREE.MeshBasicMaterial({color:0xFF0000, depthWrite:false, wireframe:wires})
+              new THREE.MeshBasicMaterial({color:0xE4CBCB, depthWrite:false, wireframe:wires})
             );            
 
             pixel._i = Math.floor( Math.random() * 10 ); //id
@@ -87,16 +87,18 @@ export default class Face {
 
     update(p){
 
-        if(p >= .98 || p <= .01 ){
+        if(p >= .98 || p <= .01 && window.scrollY > 100 ){
             vars.isPauseLoopFunctions = true;
             vars.isPauseGlitch = true;
         }else{
             if(vars.isPauseGlitch == true){
                 vars.isPauseGlitch = false;
-                vars.main.refresh();
+                vars.main.refreshWithTimeout();
             }
             vars.isPauseLoopFunctions = false;
         }
+
+        vars.main.updateDistortion(0.003 + 0.015 * p);
 
         for(var i=0; i<pixels.length; ++i){
             let pixel = pixels[i];

@@ -1,0 +1,29 @@
+
+{
+    "name": "UNFUR Project",
+    "short_name": "UNFUR",
+    "icons": [
+      {
+        "src": "/assets/icons/unfur-192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/icons/unfur-384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/icons/unfur-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "theme_color": "#222222",
+    "background_color": "#222222",
+    "display": "standalone",
+    "start_url": "/"
+  }

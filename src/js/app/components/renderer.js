@@ -33,14 +33,18 @@ export default class Renderer {
     this.updateSize();
 
     // Listeners
-    document.addEventListener('DOMContentLoaded', () => this.updateSize(), false);
+    if (document.readyState !== 'loading') {
+      this.updateSize();
+    } else {
+      document.addEventListener('DOMContentLoaded', () => this.updateSize(), false);
+    }
     window.addEventListener('resize', () => this.updateSize(), false);
   }
 
   updateSize() {
-    vars.windowSize = {width:this.container.offsetWidth, height:this.container.offsetHeight};
+    vars.windowSize = {width:window.innerWidth, height:window.innerHeight};
     vars.main.events.onWindowResize();
-    this.threeRenderer.setSize(this.container.offsetWidth, this.container.offsetHeight);
+    this.threeRenderer.setSize(window.innerWidth, window.innerHeight);
   }
 
   render(scene, camera) {

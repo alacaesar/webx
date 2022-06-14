@@ -39,8 +39,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'UNFUR™ Project - Fur fashion to fight the fur industry',
       favicon: paths.src + '/images/favicon.png',
-      template: paths.src + '/template.html', // template file
+      template: paths.src + '/templates/index.html', // template file
       filename: 'index.html', // output file
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'UNFUR™ Project - Fur fashion to fight the fur industry',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/templates/nft.html', // template file
+      filename: 'nft/index.html', // output file
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'UNFUR™ Project - Fur fashion to fight the fur industry',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/templates/interview.html', // template file
+      filename: 'interview/index.html', // output file
     }),
   ],
 

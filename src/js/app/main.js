@@ -33,7 +33,9 @@ var composer,
     distortPass,
     grainPass,
     fxaaPass,
-    glitchPass;
+    glitchPass,
+    
+    refreshTimeout;
 
 // Custom
 import Face from './elements/face';
@@ -48,82 +50,84 @@ export default class Main {
 
     this.container = container;
 
-    this.clock = new THREE.Clock();
-
     // Events manager
     this.events = new Events();
     this.events.init();
 
-    this.scene = new THREE.Scene();
-    this.scene.fog = new THREE.FogExp2(Config.fog.color, Config.fog.near);
+    if(container){
+      this.clock = new THREE.Clock();
 
-    vars.scene = this.scene;
+      this.scene = new THREE.Scene();
+      this.scene.fog = new THREE.FogExp2(Config.fog.color, Config.fog.near);
 
-    // Get Device Pixel Ratio first for retina
-    if(window.devicePixelRatio) {
-      Config.dpr = window.devicePixelRatio;
-    }
+      vars.scene = this.scene;
 
-    // Main renderer constructor
-    this.renderer = new Renderer(this.scene, container);
+      // Get Device Pixel Ratio first for retina
+      if(window.devicePixelRatio) {
+        Config.dpr = window.devicePixelRatio;
+      }
 
-    // Components instantiations
-    this.camera = new Camera(this.renderer.threeRenderer);
-    this.light = new Light(this.scene);
+      // Main renderer constructor
+      this.renderer = new Renderer(this.scene, container);
 
-    // Create and place lights in scene
-    //const lights = ['ambient', 'directional', 'point', 'hemi'];
-    const lights = ['directional'];
-    //lights.forEach((light) => this.light.place(light));
+      // Components instantiations
+      this.camera = new Camera(this.renderer.threeRenderer);
+      this.light = new Light(this.scene);
 
-    // Dev perpose stats
-    if(Config.isDev){
-      this.stats = Stats();
-      document.body.appendChild(this.stats.dom);
-      vars.loopFunctions.push([()=> this.stats.update(), "UPDATE_STATS"]);
-    }
+      // Create and place lights in scene
+      //const lights = ['ambient', 'directional', 'point', 'hemi'];
+      const lights = ['directional'];
+      //lights.forEach((light) => this.light.place(light));
 
-    // Render Pass Setup
-    renderPass = new RenderPass( this.scene, this.camera.threeCamera );
-    grainPass = new ShaderPass( FilmGrainShader );
-    fxaaPass = new ShaderPass( FXAAShader );
-    distortPass = new ShaderPass( LensDistortionShader );
-    glitchPass = new GlitchPass();
-    //glitchPass.goWild = true;
-    glitchPass.curF = 10;
+      // Dev perpose stats
+      if(Config.isDev){
+        this.stats = Stats();
+        document.body.appendChild(this.stats.dom);
+        vars.loopFunctions.push([()=> this.stats.update(), "UPDATE_STATS"]);
+      }
 
-    glitchPass.material.uniforms.distortion_x.value = 0.0;
-    glitchPass.material.uniforms.distortion_y.value = 0.0;
+      // Render Pass Setup
+      renderPass = new RenderPass( this.scene, this.camera.threeCamera );
+      grainPass = new ShaderPass( FilmGrainShader );
+      fxaaPass = new ShaderPass( FXAAShader );
+      distortPass = new ShaderPass( LensDistortionShader );
+      glitchPass = new GlitchPass();
+      //glitchPass.goWild = true;
+      glitchPass.curF = 10;
 
-    composer = new EffectComposer( this.renderer.threeRenderer );
-    composer.setSize( window.innerWidth, window.innerHeight );
-    composer.setPixelRatio( window.devicePixelRatio );
-    composer.addPass( renderPass );
-    composer.addPass( fxaaPass );
-    //composer.addPass( glitchPass );
-    composer.addPass( distortPass );
-    composer.addPass( grainPass );
-    
+      glitchPass.material.uniforms.distortion_x.value = 0.0;
+      glitchPass.material.uniforms.distortion_y.value = 0.0;
 
-    setTimeout(() => {
-      //composer.removePass( glitchPass );
-    }, 2000);
+      composer = new EffectComposer( this.renderer.threeRenderer );
+      composer.setSize( window.innerWidth, window.innerHeight );
+      composer.setPixelRatio( window.devicePixelRatio );
+      composer.addPass( renderPass );
+      composer.addPass( fxaaPass );
+      //composer.addPass( glitchPass );
+      composer.addPass( distortPass );
+      composer.addPass( grainPass );
+      
 
-    distortPass.material.uniforms.baseIor.value = 0.99;
-    distortPass.material.uniforms.bandOffset.value = 0.003;
-    grainPass.material.uniforms.intensity.value = 0.08;
+      setTimeout(() => {
+        //composer.removePass( glitchPass );
+      }, 2000);
 
-    this.init();
+      distortPass.material.uniforms.baseIor.value = 0.99;
+      distortPass.material.uniforms.bandOffset.value = 0.003;
+      grainPass.material.uniforms.intensity.value = 0.08;
 
-    if(Config.isVREnabled){
-      document.body.appendChild( VRButton.createButton( this.renderer.threeRenderer ) );
-      this.renderer.threeRenderer.setAnimationLoop( this.onAnimationFrame );
-      console.log('%c[( )^( )] VR Enabled','background:#FCFF00; color:#000; padding:3px 7px');
-    }else{
-      this.controls = new Controls(this.camera.threeCamera, container);
-      this.controls.threeControls.enabled = true;
+      this.init();
 
-      this.render();
+      if(Config.isVREnabled){
+        document.body.appendChild( VRButton.createButton( this.renderer.threeRenderer ) );
+        this.renderer.threeRenderer.setAnimationLoop( this.onAnimationFrame );
+        console.log('%c[( )^( )] VR Enabled','background:#FCFF00; color:#000; padding:3px 7px');
+      }else{
+        this.controls = new Controls(this.camera.threeCamera, container);
+        this.controls.threeControls.enabled = true;
+
+        this.render();
+      }
     }
 
   }
@@ -141,19 +145,21 @@ export default class Main {
   refresh() {
     const _this = this;
 
+    clearTimeout(refreshTimeout);
+
     if(!vars.isPauseGlitch){
       composer.addPass( glitchPass );
 
       this.face.refresh(
-        "assets/animals/"+ animals[k] +".jpg", 
+        "assets/animals/"+ animals[k] +".jpeg", 
         ()=>{ 
           setTimeout(function(){ 
             glitchPass.goWild = false;
-            distortPass.material.uniforms.bandOffset.value = 0.003; 
+            //distortPass.material.uniforms.bandOffset.value = 0.003; 
           }, 200); 
           setTimeout(function(){ 
             composer.removePass( glitchPass );
-          }, 2000);
+          }, 500);
 
           if(first){
             first = false;
@@ -167,11 +173,21 @@ export default class Main {
         },
         ()=>{
           if(!first) glitchPass.goWild = true;
-          distortPass.material.uniforms.bandOffset.value = 0.02; 
+          //distortPass.material.uniforms.bandOffset.value = 0.02; 
         }
       );
-      setTimeout(function(){ _this.refresh(); }, 4000 + Math.random() * 4000 );
+      refreshTimeout = setTimeout(function(){ _this.refresh(); }, 4000 + Math.random() * 4000 );
     }
+  }
+
+  refreshWithTimeout(){
+    const _this = this;
+    clearTimeout(refreshTimeout);
+    refreshTimeout = setTimeout(function(){ _this.refresh(); }, 4000 + Math.random() * 4000 ); 
+  }
+
+  updateDistortion(k, l){
+    distortPass.material.uniforms.bandOffset.value = k;
   }
 
   intro(){

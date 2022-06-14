@@ -14,7 +14,7 @@ export default {
         aspect: 1,
         posX: 0,
         posY: 0,
-        posZ: 270
+        posZ: 320
     },
     controls: {
         autoRotate: false,

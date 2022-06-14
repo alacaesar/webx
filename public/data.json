@@ -1,65 +1,79 @@
 {
     "collection":[
         {
-            "name": "ITEM 001",
-            "url": "#",
-            "video": "assets/videos/01.mp4",
-            "images": ["assets/drops/01.jpg"],
-            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "name": "The Fur de lis",
+            "animal": "Digital Arctic Fox Fur",
+            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "video": "https://player.vimeo.com/progressive_redirect/playback/715911097/rendition/1080p/file.mp4?loc=external&signature=5614389796d6cb8ef295880d06501bb2d7f56a326fe7e79f7d39d09d2a3c9c1b",
+            "cover": "assets/drops/blythe1-cover.webp",
+            "images": ["assets/drops/blythe1-1.jpg", "assets/drops/blythe1-2.jpg", "assets/drops/blythe1-3.jpg", "assets/drops/blythe1-4.jpg", "assets/drops/blythe1-5.jpg", "assets/drops/blythe1-6.jpg", "assets/drops/blythe1-7.jpg"],
+            "excerpt": "I wanted to take patterns and ideas that are centuries old and rework them to fit into a cutting-edge virtual platform.",
+            "description": "The concept for this look began with an initial investigation into imagery and textiles from 16th century Western Europe. Specifically, I fell in love with the ornate gold pattern and rich colours which were both popular with both the English monarchy, and Catholic Church. I also looked at how fur was used, especially in relation to the monarchy, to add grandeur and power to a garment. I wanted to present a modern and fashionable version of these concepts in a digital space, taking patterns and ideas that are centuries old and reworking them to fit into cutting edge virtual platforms. allowing myself to design in a way that would not be practical for a physical garment.",
+            "designer": 3
+        },
+        {
+            "name": "Untouched",
+            "animal": "Digital Mink Fur",
+            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "video": "https://player.vimeo.com/progressive_redirect/playback/716125093/rendition/1080p/file.mp4?loc=external&signature=e5168fa2670bb0915c9c4ddb5c834e3a48b8d6c97cb873e3e0654f634931103b",
+            "cover": "assets/drops/jessica-cover.webp",
+            "images": ["assets/drops/jessica-1.jpg", "assets/drops/jessica-2.jpg", "assets/drops/jessica-3.jpg", "assets/drops/jessica-4.jpg", "assets/drops/jessica-5.jpg", "assets/drops/jessica-6.jpg", "assets/drops/jessica-7.jpg"],
+            "excerpt": "Because it only exists in the digital world, without further harming animals.",
+            "description": "I was inspired by my deaf grandmother's fur coat, which she gifted me a few years ago. I then looked into some antique hearing aids, my grandmother wedding dress and Cymatics, the term was coined by Hans Jenny, a Swiss follower of the philosophical school. Cymatics captures sounds through vibration in pictures. I named it Untouched because it only exists in the digital world and the fur is only able to be viewed visually and no longer physically. This way we can see the beauty of fur without further harming animals.",
             "designer": 0
         },
         {
-            "name": "ITEM 002",
-            "url": "#",
-            "video": "assets/videos/02.mp4",
-            "images": ["assets/drops/02.jpg"],
-            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
-            "designer": 1
+            "name": "The Iconoclast",
+            "animal": "Digital Arctic Fox Fur",
+            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "video": "https://player.vimeo.com/progressive_redirect/playback/716145225/rendition/1080p/file.mp4?loc=external&signature=45c8e73bdff17000bec0122bfbb7051db354131fff5b422701dd935fede1cdc2",
+            "cover": "assets/drops/blythe2-cover.webp",
+            "images": ["assets/drops/blythe2-1.jpg", "assets/drops/blythe2-2.jpg", "assets/drops/blythe2-3.jpg", "assets/drops/blythe2-4.jpg", "assets/drops/blythe2-5.jpg", "assets/drops/blythe2-6.jpg", "assets/drops/blythe2-7.jpg"],
+            "excerpt": "Inspired by the black on white contrast seen in the Ermine designs I wanted to utilise this idea to cut across the body to create bold and modern shapes.",
+            "description": "Researching 16th century Catholicism and its relationship to the English monarchy I have been heavily influenced by dress, textiles and paintings from this period. I undertook a lot of my research at the Victoria and Albert Museum in London where I fell in love with the rich textiles and colours from across Europe in the 1500s. When I began to relate this back to fur I became specifically interested in the white and black fur that is often found on ceremonial garments worn by members of the monarchy, known as Ermine.",
+            "designer": 3
         },
         {
-            "name": "ITEM 003",
-            "url": "#",
-            "video": "assets/videos/03.mp4",
-            "images": ["assets/drops/03.jpg"],
-            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
+            "name": "Sheltered",
+            "animal": "Digital Seal Fur",
+            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "video": "https://player.vimeo.com/progressive_redirect/playback/715911659/rendition/1080p/file.mp4?loc=external&signature=d69bb36fe7769810ce9481700601d09d2749d011777647a0668125beeb4595e6",
+            "cover": "assets/drops/isabel-cover.webp",
+            "images": ["assets/drops/isabel-1.jpg", "assets/drops/isabel-2.jpg", "assets/drops/isabel-3.jpg", "assets/drops/isabel-4.jpg", "assets/drops/isabel-5.jpg", "assets/drops/isabel-6.jpg", "assets/drops/isabel-7.jpg"],
+            "excerpt": "The concept behind my outfit design is the idea of protection and safety.",
+            "description": "I wanted to relate the concept of the Unfur Fashion cause of saving and protecting the many animals that are killed for their fur. I was initially inspired by the temporary plywood skating shelters that were designed and constructed by the Patkau Architects to be put on Winnipeg River in Canada in the winter when it was frozen as a place for skaters to rest and shelter from the elements. I was inspired by the shapes of these shelters and their lay plans.",
             "designer": 2
         },
         {
-            "name": "ITEM 004",
-            "url": "#",
-            "video": "assets/videos/04.mp4",
-            "images": ["assets/drops/04.jpg"],
-            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
-            "designer": 3
-        },
-        {
-            "name": "ITEM 005",
-            "url": "#",
-            "video": "assets/videos/05.mp4",
-            "images": ["assets/drops/05.jpg"],
-            "description": "This spectacular piece of wearable and sculptural art took thousands of hours to create, and was made by hand across both the physical and digital versions.",
-            "designer": 3
+            "name": "Mundane Extended Coat",
+            "animal": "Digital Rabbit & Fox Fur",
+            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "video": null,
+            "cover": "assets/drops/denise-cover.webp",
+            "images": ["assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg"],
+            "excerpt": "The story of this piece is a reflection on femininity as a stereotype in fashion.",
+            "description": "The idea of women's garments having to be overly sexy, provocative, and created using shades of pink & red to represent lust and delicacy, can be liberating and limiting at the same time. In this piece, these elements are present, combined with unpredictable and daring changes in shapes and cuts, in an almost excessive way, taking these to a degree of irony. This is linked to the Unfur project, in a way of using contrasted concepts, to reshape its meaning, using fashion as a bridge.",
+            "designer": 1
         }
     ],
 
     "designers":[
         {
             "id": 0,
-            "name": "Jessica R Amory",
+            "name": "Jessica Rey",
             "dept": "UAL: London College of Fashion",
-            "bio": "Jessica R Amory is a British/Nevisian technical Streetwear and 3d concept designer based in London. Amory studied technical Sportswear design at UAL: London College of Fashion, before graduating in 2018 to pursue a career in the Marine and Defence sector as a New Product Development Designer for Survivalists wear. During this time, Jessica learnt digital and creative techniques which led to her interest in 3d design technologies and outputs. Currently in the process of completing her Master’s in Digital Fashion, the first course of its kind, her hopes for the future are to create Virtual reality- to- reality collaborative concept designs and animations across different genres.",
-            "photo": "assets/designers/jessi.jpg",
+            "bio": "Is 22 years old and was born in Santa Cruz, California. Turning 16, she decided to do an apprenticeship as a dressmaker and graduated as a Fashion Technologist, Federal Diploma of Higher Education in 2019. In 2020 she started her Bachelor in Fashion Design at the University of Westminster in London, UK. Since then, she has interned for Lauren Perrin a London based fashion designer.",
+            "photo": "assets/designers/jessica.webp",
             "links": [
-                {"type":"instagram", "url":"https://www.instagram.com/jessi_ammo/"},
-                {"type":"Linkedin", "url":"https://www.linkedin.com/in/jessi-r-amory-503049115/"}
+                {"type":"instagram", "url":"https://www.instagram.com/jessic.arey/"}
             ]
         },
         {
             "id": 1,
             "name": "Denise Maissonave",
             "dept": "Womenswear Course",
-            "bio": "Denise Maissonave is a 24 year old fashion student from Buenos Aires, Argentina. Having moved to London in 2019 and currently enrolled in University of Westminster's womenswear course, her work frequently portrays personal memories of her upbringings in South America, born into a family of Franco-Italian immigrants.",
-            "photo": "assets/designers/denise.jpg",
+            "bio": "Is a 24-year-old fashion student from Buenos Aires, Argentina. Having moved to London in 2019 and currently enrolled in University of Westminster’s womenswear course, her work frequently portrays personal memories of her upbringings in South America, born into a family of Franco-Italian immigrants.",
+            "photo": "assets/designers/denise.webp",
             "links": [
                 {"type":"instagram", "url":"https://www.instagram.com/denitsze/"}
             ]
@@ -68,19 +82,90 @@
             "id": 2,
             "name": "Isabel Ealand",
             "dept": "Fashion Design BA",
-            "bio": "I am a British, 20 year old, Fashion Design BA (Hons) student and have just completed my second year at the University of Westminster.",
-            "photo": "assets/designers/isabel.jpg",
+            "bio": "I am a British, 20-year-old, Fashion Design BA (Hons) student and have just completed my second year at the University of Westminster.",
+            "photo": "assets/designers/isabel.webp",
             "links": []
         },
         {
             "id": 3,
             "name": "Blythe Brunt",
             "dept": "Fashion Design BA",
-            "bio": "I am a 21 year old Fashion Design student from London currently studying at the University of Westminster. My work can be characterised by bold patterns, and strong silhouettes. European history and 20th century art is a big inspiration, and I love to reimagine historical clothing and modernist art as contemporary fashion. Sustainability is at the heart of all my practices and I use a lot of deadstock and upcycled fabrics in my work. I am fascinated by the relationship that fashion has with emerging technology and have previously used methods such as 3D Printing to create work, but am particularly excited about the rise of virtual fashion and the impact that it is going to have on the industry.",
-            "photo": "assets/designers/blythe.jpg",
+            "bio": "I am a 21-year-old Fashion Design student from London currently studying at the University of Westminster. My work can be characterised by bold patterns, and strong silhouettes. European history and 20th century art is a big inspiration, and I love to reimagine historical clothing and modernist art as contemporary fashion. Sustainability is at the heart of all my practices, and I use a lot of deadstock and upcycled fabrics in my work.",
+            "photo": "assets/designers/blythe.webp",
             "links": [
                 {"type":"instagram", "url":"https://www.instagram.com/verityblythe/"},
                 {"type":"website", "url":"https://www.verityblythe.com/"}
+            ]
+        }
+    ],
+
+    "interviews":[
+        {
+            "thumbnail": "assets/interviews/001.webp",
+            "type": "Interview",
+            "title": "Making the leap into Metaverse for Digital Fashion",
+            "excerpt": "With over 20 years' experience in the creative and design field, Lionell Schuring, VP & Chief Creative Officer at Mobiquity shares his view in this article on how metaverse and NFTs will disrupt the future of the fashion industry.",
+            "author": "Lionell Schuring, Chief Creative Officer",
+            "content": "<h3>What is the Metaverse, exactly?</h3><p>Recently, there has been a lot of buzz around the Metaverse. As a creative I am more interested in making innovation real rather than just talking about it. Despite the never-ending buzz, this whole concept of the Metaverse is still too fluid and there is no Metaverse yet. What we have now are just technologies like augmented reality (AR), virtual reality (VR) and non-fungible tokens (NFTs) that are reaching critical mass and which you can already use to solve problems and frictions in our daily lives.</p><p>I believe that once the Metaverse becomes a reality — in whatever shape - we will just have to call it the internet again. Concisely, the Metaverse is the natural evolution of the internet we know today. Early on, the internet consisted only of computers talking to computers. Web 1.0 computers connected us to all kinds of information, then Web 2.0 connected us to other people, and now Web 3.0 connects us to places and material objects.</p><p>But this will not mean people, places, and objects will only meet each other in VR. It will be a constant mixture of realities and the moment you do not feel the borders between realities is when the Metaverse is truly born — or better said - our next step in the evolution of the internet. To make it practical, you can still feel a big boundary now when you have a meeting. It is perfectly fine when all the participants are online, it works flawlessly when everyone is in one room together, but we are all struggling when it is hybrid. Once that feeling fades away, we will have made a huge step forward in experiencing the metaverse.</p><h3>Digital Fashion is built for the Metaverse</h3><p>As we have already seen in the past year, fashion is one of the first industries that has effective use cases in metaverse. One of my hobbies is playing computer games. While I was playing World of Warcraft over a decade ago, I realized that using clothing and fashion as a statement of who we are can easily transcend from our physical to the digital world.</p><p>Moving forward 10 years later, I see that many games now allow users to craft outfits for their avatars using digital fashion. Therefore, it has now become a frequent practice to tap into digital fashion to express yourself and make your character unique in various online games. So, yes, fashion plays the same role in our digital world as it does in the physical world.</p><h3>How Metaverse brings positive change to animal cruelty in fashion</h3><p>Before we dive into fur, let's first talk about the fashion industry in general. Lately, we are reading a lot of negative news around NFTs and blockchain and how much energy these technologies use. While the climate controversy swirling around NFTs is true and is a key factor to mention and be dealt with, we should also be looking into the insane amount of energy being wasted in the fashion industry by growing and harvesting the resources to produce and distribute clothes. With low prices and ever-changing collections, fashion brands and the clothing industry are tempting shoppers to over-consume mass-produced items which contributes to more than 92 million tons of waste annually. You will not have all this waste in the digital world.</p><p>Now going back to the fur industry, this brings another layer of complexity to the fashion landscape. Nowadays, buying and wearing fur clothes is cruel and unnecessary, so if you are looking to wear them on the streets for a casual walk, you will be rightfully considered to be an outcast. Wearing fur is no longer only frowned upon in many parts of the world, but people were also attacked in the streets of London or New York if they wore so much as a fur scarf. The obvious reason is the huge animal cruelty that goes with it. To substitute real fur and its implications to the animals and the environment, but still use this garment from a fashion point of view, we're launching a UNFUR digital fashion collection using NFTs. This initiative creates a debate between wearing fur in the digital world while no animals are being hurt and auctioning the NFTs and using the money we get to fight the fur industry in the physical world. Once we launch the collection on June 14th at METAMS, you can make a bid and be part of this fight against the fur industry.</p><h3>With NFTs growing appetite for digital garments collections, the fashion industry will have to evolve</h3><p>Fashion in Metaverse is unlimited, but NFTs are the backbone of Metaverse's revenue generation, so they co-exist to revolutionize the digital fashion industry. As digital fashion has come to the forefront, we are at a stage where fashion has just started to engage with NFTs.</p><p>Because the digital world presents us with no boundaries in our creativity, I will not even start to predict where fashion will go in the future. But in the fur fashion case, NFTs and digital fashion can bring new possibilities to develop further. By becoming sustainable and animal cruelty free, both have the potential to expand and redefine fur fashion as we know it.</p><h3>What is next for brands launching into the Metaverse?</h3><p>Ever since digital became part of our lives, it has been attacking brands. Mapping out how your brand is different, memorable and desirable by your ideal customer is just something to help people in their decision to choose your products. Playing this game used to be relatively simple, sometimes you didn't even have to have a good product, if your brand power was strong enough to convince people to buy from you. But now with digital disrupting the ecosystem, brands need to work harder to create enough gravity to pull people towards them.</p><p>As a brand you need to orchestrate a whole symphony of touchpoints that make people's experience easier and meaningful with your brand. This whole metaverse is just another layer you need to deal with as a brand. You just have to find the value in it for your customers and your business. It's quite like the internet in 1995. You just have to go in, look at what's possible but also very quickly start finding out what's valuable.</p>",
+            "date": "8 June 2022"
+        },
+        {
+            "thumbnail": "assets/interviews/002.webp",
+            "type": "Interview",
+            "title": "Digital Fashion Collection to UNFUR the World",
+            "excerpt": "With over 10+ years' experience in the creative and design field, Paul van Raak, Creative & Brand Design Director at Mobiquity shares exciting details about the UNFUR project: a digital fashion collection to fight the fur industry.",
+            "author": "Paul van Raak, Creative Director",
+            "content": "<h3>Digital fashion brings positive change to animal cruelty in the fur industry</h3></p><p>Digital technology always drives change to different industries including the fashion industry. Now with web 3.0 and the metaverse I expect new opportunities and more traction to change in the development of the creative processes.</p><p>It's exciting to see how the metaverse makes us (makers, strategists, developers, entrepreneurs, etc.) rethink the way we engage and communicate with our audiences.</p><p>With UNFUR, a digital fur fashion collection, we looked at how we can use a digital fashion collection to remind people about the lasting atrocities of the fur industry.</p><h3>NFTs and Metaverse open fashion to a new wave of creative</h3></p><p>An NFT (Non-Fungible Tokens) is a digital asset that represents real-world objects like art, music, in-game items and videos. They are bought and sold online and secured by complex digital data stored on a blockchain. This makes the ownership of an NFT secured by a chain of multiple computers across the globe. What we have seen as a trend in fashion right now, is that NFTs are not all about art and games, they are making their way into the top fashion brands and enhancing the possibilities of digital wearables. As an example, Vccess, a major industry player founded by former Forever 21, just raised a $19 million series A round to compete to become the Shopify of NFTs by allowing brands to sell NFTs directly on their websites. That said, the metaverse and NFTs will be immensely powerful in driving new revenue streams for businesses across industries.</p><p>I don't think that fur as a fashion garment itself is getting much traction in the digital space, but the digital fashion does and we can already see that happening. With the creation of more virtual spaces and the different avatar appearances, people will attach just as much value to their digital appearances as they do to their unique characteristics in the physical world.</p><p>Fashion is becoming one of the biggest industries to leverage these virtual environments. More importantly, it will be able to continuously enrich and expand its borders in the metaverse. We will be able to experience the unlimited possibilities given by the designs of our fashion collection.</p><p>The execution of such designs and the environment around them don't take into account any physical limitation of the fabric such as gravity, weight or, in our case, the use of a garment that is scarce and not acceptable to wear in the physical world.</p><p>Using different virtual fabrics, redefining, and developing new manufacturing and creative processes gives designers these unlimited possibilities.</p><h3>Digital Fashion Collection to UNFUR the World</h3></p><p>We created the UNFUR project to fight the fur industry which is still thriving in various parts of the world. Many different animals are raised in captivity to be exploited by the fur industry such as minks, foxes, chinchillas, raccoon dogs and other animals are trapped in the wild like beavers, seals, or weasels.</p><p>At Mobiquity we practice human centric design. We ideate, develop and design solutions to solve problems and frictions in our daily lives. So, the idea of using a digital fur fashion collection to fight the fur industry and drive positive change immediately came to life.</p><p>The UNFUR project intentionally brings tension between buying a digital fur fashion piece (because it is considered beautiful) while you are aware that this should not be bought in the physics world.</p><p>We use this duality as a trigger, we drive the audience to bid on one of the UNFUR NFTs and by doing that support the fight against the fur industry.</p><h3>UNFUR collection designed in collaboration with University of Westminster Fashion Institute</h3><p>The UNFUR collection is currently under full development, but a lot of work has already been done worldwide and we can see it growing by the day.  You see very few high-quality executions with this particular material. High-end digital fashion agencies such as The Fabricant (the frontrunner in digital fashion design in my opinion) and various contemporary fashion houses do have fur in their digital fashion designs. But our ambition was, of course, to develop an almost complete fur collection.</p><p>Digitising fur was completely new area for my team. One of the biggest challenges we had to overcome while working with a virtual garment was reproducing the texture, the folds, and the motion while showcasing the designs on virtual models.</p><p>Next to the digital fur fabric challenge we had to deal with our own budget which was non-existent. The tremendous efforts and energy were sourced from the many evening hours we all spent making this project a success. I am not only referring to Mobiquity and Hexaware colleagues, but also to the Fashion design students from the University of Westminster, the International Anti-Fur Coalition (IAFC) and other partners we collaborated with.</p><p>The five fashion designs made by the Westminster Fashion Institute are auctioned as NFTs on Rarible.com and the complete earnings from the UNFUR project will be used to fight the fur industry. The auction is scheduled for a period of 6 weeks starting from June 14 onwards. Once we launch our UNFUR collection at MET AMS, people can make bids and be part of this fight against the fur industry.</p><p>As said, the auction will take place on Rarible.com. And the reason choosing this platform is that, because we are aware of the environmental impact of the minting process that must be done to generate the NFT's. Flow is the most environmentally friendly option for us. According to the latest 2021 data usage report it only requires 0.18 gigawatt (GWh) of energy per hour which is significantly lower when compared to other blockchains.</p><h3>UNFUR collection launch @ MET AMS</h3><p>Partnering with METAMS gives us the great opportunity to launch the UNFUR project in three different styles. We will kick off the project at the Legendary Dinner on the evening of June 14th where guests will have the exclusive possibility to bid on the first UNFUR fashion design.</p><p>On the 16th of June, I will join the panel discussion; “Blockchain for good, charity & transparency in the metaverse where I talk with Charlotte Schroots and Mathys van Abbe about 'good' initiatives that we can make possible in the metaverse and web3.0</p><p>Last but not least, during the entire event our entire project including all five NFTs will be visible on a fantastic installation. Where of course you can immediately place a bid on one of the digital fashion pieces.</p><p>We are excited to launch our UNFUR project at MET AMS, so just come and join our cause!</p>",
+            "date": "13 June 2022"
+        }
+    ],
+
+    "credits":[
+        {
+            "group": "Mobiquity",
+            "list":[
+                { "name": "Elena Pavaletz", "role": "Motion Design Direction & 3D" },
+                { "name": "Lionell Schuring", "role": "Strategy Direction" },
+                { "name": "Paul van Raak", "role": "Creative Direction" },
+                { "name": "Sander Vermeer", "role": "Content Design" },
+                { "name": "Alaa Alnuaimi", "role": "Creative Code" },
+                { "name": "Elena Ghit", "role": "Marketing" },
+                { "name": "Madeleine Bosch", "role": "Marketing Direction" }
+            ]
+        },
+        {
+            "group": "Hexaware",
+            "list":[
+                { "name": "Immanuel Kingsley", "role": "Vice President" },
+                { "name": "Magesh Sundar", "role": "3D Lead, Graphics & Motion" },
+                { "name": "Manohar Raj D", "role": "Delivery Lead, Metaverse & NFTs" },
+                { "name": "Ashish Kumar Dubey", "role": "Technology Lead, Metaverse & NFTs" },
+                { "name": "Utkarsh Pandey", "role": "3D Artist, Graphics & Motion" },
+                { "name": "Muthu Krishnan M", "role": "3D Artist, Graphics & Motion" },
+                { "name": "Magarajan Thiruvalluar", "role": "3D Artist, Graphics & Motion" }
+            ]
+        },
+        {
+            "group": "MET AMS / Brand Fathers",
+            "list":[
+                { "name": "Rik Woldring", "role": "Co-Founder" },
+                { "name": "Peter Meere", "role": "Co-Founder" }
+            ]
+        },
+        {
+            "group": "International Anti-fur Coalition",
+            "list":[
+                { "name": "Jane Halevy", "role": "CEO" }
+            ]
+        },
+        {
+            "group": "University of Westminster",
+            "list":[
+                { "name": "Joyce Thornton", "role": "Senior Lecturer, Fashion" },
+                { "name": "Jessica Rey", "role": "Fashion Design Student" },
+                { "name": "Blythe Brunt", "role": "Fashion Design Student" },
+                { "name": "Isabel Ealand", "role": "Fashion Design Student" },
+                { "name": "Denise Maissonave", "role": "Fashion Design Student" }
             ]
         }
     ]
