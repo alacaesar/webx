@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 
 import Config from '../../data/config';
+import vars from '../tools/vars';
 
 // Main webGL renderer class
 export default class Renderer {
@@ -38,6 +39,8 @@ export default class Renderer {
 
   updateSize() {
     this.threeRenderer.setSize(this.container.offsetWidth, this.container.offsetHeight);
+    vars.height = this.container.offsetHeight;
+    vars.width = this.container.offsetWidth;
   }
 
   render(scene, camera) {

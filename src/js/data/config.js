@@ -4,25 +4,25 @@ export default {
     isVREnabled: false,
     maxAnisotropy: 1,
     fog: {
-        color: 0x003DB2,
+        color: 0x121212,
         near: 0.002
     },
     camera: {
-        fov: 45,
-        near: 1,
-        far: 3000,
+        fov: 70,
+        near: 0.1,
+        far: 1000,
         aspect: 1,
         posX: 0,
         posY: 0,
-        posZ: 270
+        posZ: 1000
     },
     controls: {
         autoRotate: false,
         autoRotateSpeed: -0.5,
         rotateSpeed: 0.5,
         zoomSpeed: 0.8,
-        minDistance: 160,
-        maxDistance: 540,
+        minDistance: 0.1,
+        maxDistance: 1000,
         minPolarAngle: Math.PI / 5,
         maxPolarAngle: Math.PI / 2,
         minAzimuthAngle: -Infinity,

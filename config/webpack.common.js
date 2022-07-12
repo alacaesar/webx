@@ -65,5 +65,6 @@ module.exports = {
       '@': paths.src,
       assets: paths.public,
     },
+    fallback: { crypto: false, fs: false },
   },
 }

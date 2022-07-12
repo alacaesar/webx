@@ -21,6 +21,7 @@ import Events from './tools/events';
 
 // Custom
 import Sample from './elements/sample';
+import Explode from './elements/explode';
 
 export default class Main {
   constructor(container) {
@@ -76,7 +77,11 @@ export default class Main {
   }
 
   init(){
-    const sample = new Sample();
+    this.explode = new Explode();
+  }
+
+  onTriggerClick(){
+    this.explode.onClick();
   }
 
   render() {
