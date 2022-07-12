@@ -29,7 +29,7 @@ export default class Root {
 
       if(pageType == "home"){
         _this.initHomeScrolls();
-        _this.startCountdown();
+        //_this.startCountdown();
         _this.initLinkEvents();
       }
       else{

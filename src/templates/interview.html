@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Interview - <%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTM966QG1M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XTM966QG1M');
+    </script>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://www.unfurproject.com/assets/icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.unfurproject.com/assets/icons/apple-touch-icon-114x114.png" />
@@ -89,6 +98,8 @@
       </div>
       <button class="close"><span class="hide">Close</span></button>
     </div>
+
+    <a href="https://thefwa.com/cases/unfur-p2" rel="nofollow" target="blank" class="fotd"><span class="hide">FWA of The Day</span></a>
 
   </body>
 </html>

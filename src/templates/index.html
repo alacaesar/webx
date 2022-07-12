@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTM966QG1M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XTM966QG1M');
+    </script>
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://www.unfurproject.com/assets/icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.unfurproject.com/assets/icons/apple-touch-icon-114x114.png" />
@@ -75,7 +83,7 @@
 
           <div class="logo-holder">
 
-            <p class="anim-words off medium">Fur fashion to fight the fur industry</p>
+            <h1 class="anim-words off medium">Fur fashion to fight the fur industry</h1>
             
             <!-- logo -->
             <svg id="unfur" width="660" height="140" viewBox="0 0 660 140">
@@ -124,7 +132,7 @@
         </div>
         <div class="copy">
           <p class="anim-words medium">The UNFUR Digital Fashion Collection</p>
-          <a href="https://rarible.com/user/flow/0x432bf59769bdf317/created" target="_blank" rel="nofollow" class="button" title="View on Marketplace"><span>View on Marketplace</span><i></i></a>
+          <a href="https://rarible.com/user/flow/0x432bf59769bdf317/sale" target="_blank" rel="nofollow" class="button" title="View on Marketplace"><span>View on Marketplace</span><i></i></a>
         </div>
       </section>
 
@@ -159,12 +167,15 @@
               <h3 class="anim-letters large off">MET AMS</h3>
             </li>
             <li>
-              <small>Auction Start</small>
-              <p class="anim-words medium off">4 July 2022, on Rarible</p>
-              <h3 class="anim-letters large off made">
-                <span class="letter"><span class="days">00</span></span>
-                <span class="letter"><span class="hours">00</span></span>
-                <span class="letter"><span class="minutes">00</span></span>
+              <small>Auction Launched</small>
+              <p class="anim-words medium off">on Rarible</p>
+              <h3 class="anim-letters large off">
+                <span class="letter"><span>14</span></span>
+                <span class="letter"><span>June</span></span>
+                <span class="letter"><span>22</span></span>
+                <span class="letter"><span class="days hide"></span></span>
+                <span class="letter"><span class="hours hide"></span></span>
+                <span class="letter"><span class="minutes hide"></span></span>
                </h3>
             </li>
           </ul>
@@ -250,7 +261,7 @@
        <!-- making-of -->
        <section id="makingof">
         <div class="inside">
-          <p class="anim-words off medium">Take a peak behind the scene of UNFUR</p>
+          <p class="anim-words off medium">Take a peek behind the scene of UNFUR</p>
           <button class="video">
             <div>
               <video poster="/assets/videos/making-off.webp" src="https://player.vimeo.com/progressive_redirect/playback/718665429/rendition/540p/file.mp4?loc=external&signature=7a1ccf03c7a245d370acf23eb5b6a9fedef8de3cd631835eeb3bc23a22f40edd" playsinline autoplay muted loop></video>
@@ -413,6 +424,8 @@
         <circle r="2" cx="2" cy="18" fill="#fff"/>
       </svg>
     </span>
+
+    <a href="https://thefwa.com/cases/unfur-p2" rel="nofollow" target="blank" class="fotd"><span class="hide">FWA of The Day</span></a>
 
   </body>
 </html>

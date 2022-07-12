@@ -1,36 +1,29 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
-    ]
-  },
-
-  "headers": [ {
+    ],
+    "headers": [
+      {
+      "source":"**",
+      "headers": [
+       {"key": "X-Frame-Options", "value": "DENY"},
+       {"key": "X-XSS-Protection", "value": "1; mode=block"}
+      ]}, {
     "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
     "headers": [ {
-      "key": "Access-Control-Allow-Origin",
-      "value": "*"
-    } ]
-  }, {
-    "source": "**/*.@(jpg|jpeg|gif|png|webp)",
-    "headers": [ {
-      "key": "Cache-Control",
-      "value": "max-age=7200"
-    } ]
-  }, {
-    "source": "404.html",
-    "headers": [ {
-      "key": "Cache-Control",
-      "value": "max-age=300"
-    } ]
-  } ]
+      "key": "Access-Control-Allow-Origin","value": "*"}
+      ]}, {
+      "source": "**/*.@(jpg|jpeg|gif|png|webp|js|svg|css)",
+      "headers": [ {"key": "Cache-Control","value": "max-age=7200"}
+      ]},{
+      "source": "404.html",
+      "headers": [ {"key": "Cache-Control","value": "max-age=300"}
+      ]}
+  ]
+  }
 }

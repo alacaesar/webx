@@ -3,7 +3,7 @@
         {
             "name": "The Fur de lis",
             "animal": "Digital Arctic Fox Fur",
-            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "url": "https://rarible.com/token/flow/A.01ab36aaf654a13e.RaribleNFT:223460?tab=details",
             "video": "https://player.vimeo.com/progressive_redirect/playback/715911097/rendition/1080p/file.mp4?loc=external&signature=5614389796d6cb8ef295880d06501bb2d7f56a326fe7e79f7d39d09d2a3c9c1b",
             "cover": "assets/drops/blythe1-cover.webp",
             "images": ["assets/drops/blythe1-1.jpg", "assets/drops/blythe1-2.jpg", "assets/drops/blythe1-3.jpg", "assets/drops/blythe1-4.jpg", "assets/drops/blythe1-5.jpg", "assets/drops/blythe1-6.jpg", "assets/drops/blythe1-7.jpg"],
@@ -14,7 +14,7 @@
         {
             "name": "Untouched",
             "animal": "Digital Mink Fur",
-            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "url": "https://rarible.com/token/flow/A.01ab36aaf654a13e.RaribleNFT:223466?tab=details",
             "video": "https://player.vimeo.com/progressive_redirect/playback/716125093/rendition/1080p/file.mp4?loc=external&signature=e5168fa2670bb0915c9c4ddb5c834e3a48b8d6c97cb873e3e0654f634931103b",
             "cover": "assets/drops/jessica-cover.webp",
             "images": ["assets/drops/jessica-1.jpg", "assets/drops/jessica-2.jpg", "assets/drops/jessica-3.jpg", "assets/drops/jessica-4.jpg", "assets/drops/jessica-5.jpg", "assets/drops/jessica-6.jpg", "assets/drops/jessica-7.jpg"],
@@ -25,7 +25,7 @@
         {
             "name": "The Iconoclast",
             "animal": "Digital Arctic Fox Fur",
-            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "url": "https://rarible.com/token/flow/A.01ab36aaf654a13e.RaribleNFT:223464?tab=details",
             "video": "https://player.vimeo.com/progressive_redirect/playback/716145225/rendition/1080p/file.mp4?loc=external&signature=45c8e73bdff17000bec0122bfbb7051db354131fff5b422701dd935fede1cdc2",
             "cover": "assets/drops/blythe2-cover.webp",
             "images": ["assets/drops/blythe2-1.jpg", "assets/drops/blythe2-2.jpg", "assets/drops/blythe2-3.jpg", "assets/drops/blythe2-4.jpg", "assets/drops/blythe2-5.jpg", "assets/drops/blythe2-6.jpg", "assets/drops/blythe2-7.jpg"],
@@ -36,7 +36,7 @@
         {
             "name": "Sheltered",
             "animal": "Digital Seal Fur",
-            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
+            "url": "https://rarible.com/token/flow/A.01ab36aaf654a13e.RaribleNFT:223148?tab=details",
             "video": "https://player.vimeo.com/progressive_redirect/playback/715911659/rendition/1080p/file.mp4?loc=external&signature=d69bb36fe7769810ce9481700601d09d2749d011777647a0668125beeb4595e6",
             "cover": "assets/drops/isabel-cover.webp",
             "images": ["assets/drops/isabel-1.jpg", "assets/drops/isabel-2.jpg", "assets/drops/isabel-3.jpg", "assets/drops/isabel-4.jpg", "assets/drops/isabel-5.jpg", "assets/drops/isabel-6.jpg", "assets/drops/isabel-7.jpg"],
@@ -45,12 +45,12 @@
             "designer": 2
         },
         {
-            "name": "Mundane Extended Coat",
+            "name": "Mundane",
             "animal": "Digital Rabbit & Fox Fur",
-            "url": "https://rarible.com/user/flow/0x432bf59769bdf317/created",
-            "video": null,
+            "url": "https://rarible.com/token/flow/A.01ab36aaf654a13e.RaribleNFT:223465?tab=details",
+            "video": "https://player.vimeo.com/progressive_redirect/playback/720316675/rendition/1080p/file.mp4?loc=external&signature=6c7a863b4659273659dbf336d490534eb24155d90a3cb0217ca7247b4d86af4a",
             "cover": "assets/drops/denise-cover.webp",
-            "images": ["assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg", "assets/drops/denise-cover.jpg"],
+            "images": ["assets/drops/denise-1.jpg", "assets/drops/denise-2.jpg", "assets/drops/denise-3.jpg", "assets/drops/denise-4.jpg", "assets/drops/denise-5.jpg", "assets/drops/denise-6.jpg", "assets/drops/denise-7.jpg"],
             "excerpt": "The story of this piece is a reflection on femininity as a stereotype in fashion.",
             "description": "The idea of women's garments having to be overly sexy, provocative, and created using shades of pink & red to represent lust and delicacy, can be liberating and limiting at the same time. In this piece, these elements are present, combined with unpredictable and daring changes in shapes and cuts, in an almost excessive way, taking these to a degree of irony. This is linked to the Unfur project, in a way of using contrasted concepts, to reshape its meaning, using fashion as a bridge.",
             "designer": 1
@@ -128,8 +128,8 @@
                 { "name": "Lionell Schuring", "role": "Strategy Direction" },
                 { "name": "Paul van Raak", "role": "Creative Direction" },
                 { "name": "Sander Vermeer", "role": "Content Design" },
-                { "name": "Alaa Alnuaimi", "role": "Creative Code" },
-                { "name": "Elena Ghit", "role": "Marketing" },
+                { "name": "Alaa Alnuaimi", "role": "Brand Design & Creative Code" },
+                { "name": "Elena Ghit", "role": "Marketing Strategy" },
                 { "name": "Madeleine Bosch", "role": "Marketing Direction" }
             ]
         },
