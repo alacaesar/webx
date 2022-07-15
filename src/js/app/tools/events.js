@@ -10,20 +10,19 @@ export default class Events {
       
     window.addEventListener("blur", () => { vars.isPaused = true; });
     window.addEventListener("focus", () => {
+      if(vars.isPaused){
           vars.isPaused = false; 
           vars.main.render();
+      }
     });
 
     window.addEventListener("mousemove", this.updateMouseEvents, false);
 
-    let button = document.querySelector(".trigger");
-    button.addEventListener("click", (e) => { vars.main.onTriggerClick(); }, false);
-
   }
 
   updateMouseEvents(e) {
-    vars.mouse.x = e.clientX / vars.width;
-    vars.mouse.y = e.clientY / vars.height;
+    vars.mouse.x = (e.clientX / vars.width) * 2 - 1;
+    vars.mouse.y = - (e.clientY / vars.height) * 2 + 1;
 
     vars.mouse.vX = vars.mouse.x - vars.mouse.prevX;
     vars.mouse.vY = vars.mouse.y - vars.mouse.prevY;

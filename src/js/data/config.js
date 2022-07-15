@@ -4,8 +4,8 @@ export default {
     isVREnabled: false,
     maxAnisotropy: 1,
     fog: {
-        color: 0x121212,
-        near: 0.002
+        color: 0x000000,
+        near: 0.001
     },
     camera: {
         fov: 70,
@@ -14,7 +14,7 @@ export default {
         aspect: 1,
         posX: 0,
         posY: 0,
-        posZ: 1000
+        posZ: 300
     },
     controls: {
         autoRotate: false,

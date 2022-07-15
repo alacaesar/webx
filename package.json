@@ -56,9 +56,11 @@
   "dependencies": {
     "@tensorflow/tfjs-core": "^3.18.0",
     "animejs": "^3.2.1",
+    "dat.gui": "^0.7.9",
     "face-api.js": "^0.20.0",
     "regenerator-runtime": "^0.13.9",
     "tfjs-image-recognition-base": "^0.6.2",
-    "three": "^0.136.0"
+    "three": "^0.136.0",
+    "three-noise": "^1.1.2"
   }
 }

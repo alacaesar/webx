@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  color: #fff;
 }
 
 main{
@@ -48,4 +49,93 @@ canvas#WaterTexture{
   top: 0;
   z-index: 10;
   background-color: silver;
+}
+
+
+.title{
+  position: absolute;
+  left: 5.2%;
+  top: 80.5%;
+  z-index: 9;
+  color: white;
+  // top:150px;
+}
+
+$anim-font-size: 2.1vw;
+
+.anim {
+  padding: 10px 0;
+  font-size: $anim-font-size;
+  line-height: 124%;
+
+  .word{
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .letter{
+    display: inline-block;
+    vertical-align: top;
+
+    span {
+      display: block;
+    }
+
+    &.aa span{
+      line-height: 0;
+    }
+    &.aa span svg{
+      height: calc($anim-font-size * 1.2);
+      width: auto;
+    }
+
+    &.kern{
+      margin-left: calc($anim-font-size * -0.08);
+    }
+  }
+}
+
+.dot{
+  position: fixed;
+  display: block;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  &:nth-child(1){ left:5.2% ; top: 9.25%; }
+  &:nth-child(2){ left:44.0% ; top: 9.25%; }
+  &:nth-child(3){ left:82.8% ; top: 9.25%; }
+  &:nth-child(4){ left:5.2% ; top: 75.9%; }
+  &:nth-child(5){ left:44.0% ; top: 75.9%; }
+  &:nth-child(6){ left:82.8% ; top: 75.9%; }
+
+  &.flash{
+    animation-name: flash;
+    animation-duration: .5s;
+  }
+}
+
+@keyframes flash{
+  0%{ opacity: 1; background-color: #fff; }
+  10%{ opacity: 0; }
+  20%{ opacity: 1; background-color: #fff; }
+  85%{ opacity: 1; background-color: #fff; }
+  100%{ opacity: 0; }
+}
+
+.query{
+  font-family: 'Space Mono', monospace;
+  font-size: .5vw;
+  line-height: 140%;
+  position: absolute;
+  left: 82.8%;
+  top: 80.5%;
+}
+
+.definition{
+  font-size: .8vw;
+  line-height: 120%;
+  position: absolute;
+  left: 44.0%;
+  top: 80.5%;
+  width: 16vw;
 }
