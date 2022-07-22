@@ -49,8 +49,6 @@ export default class AnimatedFont {
   }
 
   animate(){
-    this.dom.style.opacity = 1;
-
     let nn =  this.dom.querySelectorAll(".letter span");
     nn.forEach((el, i) => {
         if( !el.parentNode.classList.contains("aa") ){
@@ -70,9 +68,9 @@ export default class AnimatedFont {
     .add({
         targets: this.dom.querySelectorAll(".letter.aa span"),
         opacity: [0, 1],
-        scale: [1.5, 1],
+        scale: [1.1, 1],
         easing: "easeOutCubic",
-        duration: 777,
+        duration: 222,
         delay: (el, i) => Math.random() * 333 + 333
     })
     .add({

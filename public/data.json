@@ -4,31 +4,67 @@
       "term": "blo[c1]kc[h1]ain",
       "definition": "Refers to the transfer of control from any centralized entity to a distributed network like the blockchain.",
       "query": "cute robot riding skate board voxelized morning",
-      "visual": "assets/sample.jpg"
+      "visual": "assets/avatar-9.jpg",
+      "thumbs": [
+        "assets/avatar-0.jpg",
+        "assets/avatar-1.jpg",
+        "assets/avatar-2.jpg",
+        "assets/avatar-3.jpg",
+        "assets/avatar-4.jpg",
+        "assets/avatar-5.jpg",
+        "assets/avatar-6.jpg",
+        "assets/avatar-7.jpg",
+        "assets/avatar-8.jpg",
+        "assets/avatar-9.jpg"
+      ]
     },
     {
       "term": "spa[t1][i1]al a[u1]dio",
       "definition": "Refers to the transfer of control from any centralized entity to a distributed network like the blockchain.",
       "query": "cute robot riding skate board voxelized morning",
-      "visual": "assets/sample2.jpg"
+      "visual": "assets/portal-9.jpg",
+      "thumbs": [
+        "assets/portal-0.jpg",
+        "assets/portal-1.jpg",
+        "assets/portal-2.jpg",
+        "assets/portal-3.jpg",
+        "assets/portal-4.jpg",
+        "assets/portal-5.jpg",
+        "assets/portal-6.jpg",
+        "assets/portal-7.jpg",
+        "assets/portal-8.jpg",
+        "assets/portal-9.jpg"
+      ]
     },
     {
       "term": "e[x1]ten[d1]ed r[e1]ali[t1]y",
       "definition": "Refers to the transfer of control from any centralized entity to a distributed network like the blockchain.",
       "query": "cute robot riding skate board voxelized morning",
-      "visual": "assets/sample3.jpg"
+      "visual": "assets/blockchain-9.jpg",
+      "thumbs": [
+        "assets/blockchain-0.jpg",
+        "assets/blockchain-1.jpg",
+        "assets/blockchain-2.jpg",
+        "assets/blockchain-3.jpg",
+        "assets/blockchain-4.jpg",
+        "assets/blockchain-5.jpg",
+        "assets/blockchain-6.jpg",
+        "assets/blockchain-7.jpg",
+        "assets/blockchain-8.jpg",
+        "assets/blockchain-9.jpg"
+      ]
     },
     {
       "term": "d[i1]g[i1]tal t[w2]in",
       "definition": "Refers to the transfer of control from any centralized entity to a distributed network like the blockchain.",
       "query": "cute robot riding skate board voxelized morning",
-      "visual": "assets/sample4.jpg"
+      "visual": "assets/04.jpg"
     },
     {
       "term": "c[r1]ypt[o1]",
       "definition": "Refers to the transfer of control from any centralized entity to a distributed network like the blockchain.",
       "query": "cute robot riding skate board voxelized morning",
-      "visual": "assets/sample5.jpg"
+      "visual": "assets/05.jpg"
     }
   ]
 }

@@ -61,6 +61,7 @@
     "regenerator-runtime": "^0.13.9",
     "tfjs-image-recognition-base": "^0.6.2",
     "three": "^0.136.0",
-    "three-noise": "^1.1.2"
+    "three-noise": "^1.1.2",
+    "typewriter-effect": "^2.19.0"
   }
 }

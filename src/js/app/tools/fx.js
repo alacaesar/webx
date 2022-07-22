@@ -1,3 +1,5 @@
+import vars from "./vars";
+
 export default{
     removeFromLoop: (fx) => {
         const loopFunctions = vars.loopFunctions;

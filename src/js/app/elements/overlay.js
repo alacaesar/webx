@@ -1,5 +1,8 @@
 import anime from 'animejs';
 import fx from '../tools/fx';
+import vars from '../tools/vars';
+import AnimatedFont from '../elements/animatedFont';
+import Typewriter from 'typewriter-effect/dist/core';
 
 let shapes = [
     {name: "plus", 
@@ -70,15 +73,85 @@ export default class Overlay {
     this.qEl = this.dom.querySelector(".query span");
     this.qT = this.dom.querySelector(".query h2");
     this.qArray = qtext.split(" ");
+    this.textWrapper = this.dom.querySelector(".definition p");
+    this.title = this.dom.querySelector(".title");
 
-    this.initDots();
-    this.initQuery();
+    this.init();
 
   }
 
   init() {
     const _this = this;
     
+    this.initDots();
+    this.initFont();
+    this.typewriter = new Typewriter(this.dom.querySelector(".input p"), {cursor:"█", delay:75, deleteSpeed:2});
+    //this.display(0);
+    
+  }
+
+  killAll(delay){
+    let delayTime = delay || 0;
+    let _this = this;
+    setTimeout(()=>{
+      clearTimeout(_this.queryTimeout);
+      _this.textWrapper.innerHTML = "";
+      _this.title.innerHTML = "";
+      _this.qEl.innerHTML = "";
+      _this.qT.innerHTML = "^// WAITING";
+      this.dom.querySelector(".input p .Typewriter__wrapper").innerHTML = "";
+
+    }, delayTime);
+    
+  }
+
+  display(current){
+    
+    this.initText(vars.data.collection[current].definition);
+    this.dom.classList.remove('processing');
+
+    // this.font.write("a[a1][a2][a3][a4]b[b1]c[c1]d[d1][d2]e[e1][e2] fgh[h1][h2]i[i1]jk[k1]l[l1]m[m1][m2]n [n1]o[o1][o2][o3][o4]p[p1]q[q1]r[r1]s[s1] t[t1][t2]u[u1][u2][u3]vw[w1][w2]x[x1][x2] [x3]y[y1]z./?0123456789[tm]");
+    // this.font.write("[t1][o1][o2] muc[h2] te[c1]h[n1]o[l1]ogy[tm]");
+    // this.font.write("blo[c1]kc[h1]ain");
+    // this.font.write("spa[t1][i1]al a[u1]dio");
+    // this.font.write("e[x1]ten[d1]ed r[e1]ali[t1]y");
+
+  }
+
+  process(current){
+    this.dom.classList.add('processing');
+
+    this.typewriter
+      .typeString(vars.data.collection[current].definition)
+      .pauseFor(150)
+      .start();
+
+    this.font.write(vars.data.collection[current].term);
+    qtext = vars.data.collection[current].query;
+    this.initQuery();
+
+  }
+
+  initFont(){
+    this.font = new AnimatedFont(this.title);
+    
+  }
+
+  initText(text){
+    let _this = this;
+    const _text = text;
+    let arr = _text.split(" ");
+        arr = arr.map(n=>n.replaceAll('<$', '<i>').replaceAll('$>', '</i>'));
+        _this.textWrapper.innerHTML = '<span class="letter"><span>' + arr.join("</span></span> <span class='letter'><span>") + "</span></span>";
+
+    anime.timeline({loop:false})
+        .add({
+            targets: _this.textWrapper.querySelectorAll(".letter span"),
+            translateY: ['100%',0],
+            easing: "easeOutExpo",
+            duration: 999,
+            delay: (el, i) => 88 * i
+        });
   }
 
   initQuery(){
@@ -98,7 +171,7 @@ export default class Overlay {
     this.qArray.push(this.qArray[0]);
     this.qArray.shift();
 
-    setTimeout(()=>{ _this.initQuery() },500);
+    this.queryTimeout = setTimeout(()=>{ _this.initQuery() }, 500);
   }
 
   initDots(){
@@ -118,7 +191,7 @@ export default class Overlay {
             el.classList.add("flash");
         }
     });
-    setTimeout(()=>{ _this.randomizeDots() }, Math.random()*1000 + 100);
+    setTimeout(()=>{ _this.randomizeDots() }, Math.random()*1000 + 1000);
   }
 
 

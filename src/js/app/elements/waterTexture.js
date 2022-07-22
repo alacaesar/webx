@@ -37,6 +37,7 @@ export default class WaterTexture {
   }
 
   addPoint(point){
+    /*
     let force = 0;
     let vx = 0;
     let vy = 0;
@@ -60,10 +61,11 @@ export default class WaterTexture {
         x: point.x,
         y: point.y
     }
-
-    this.points.push({x: point.x, y: point.y, age: 0, force, vx, vy});
+    */
+    this.points.push({x: point.x, y: point.y, age: 0});
   }
 
+  /*
   drawPoint(point){
 
     let pos = {
@@ -95,13 +97,40 @@ export default class WaterTexture {
     ctx.shadowOffsetX = offset;
     ctx.shadowOffsetY = offset;
     ctx.shadowBlur = radius * 1;
+    ctx.shadowColor = `rgba(${color},${0.8 * intensity})`;
+
+    this.ctx.beginPath();
+    this.ctx.fillStyle =`rgba(${color},${0.8 * intensity})`;
+    this.ctx.arc(pos.x - offset, pos.y - offset, radius, 0, Math.PI * 2);
+    //this.ctx.rect(pos.x, pos.y, radius * 2, radius*2);
+    this.ctx.fill();
+  }
+  */
+
+  drawPoint(point){
+    let pos = {
+      x: point.x * this.width,
+      y: point.y * this.height
+    }
+    const radius = this.radius;
+    const ctx = this.ctx;
+
+    let intensity = 1.;
+    intensity = 1. - point.age / this.maxAge;
+
+    let color = `255,255,255`;
+    let offset = this.width * 5.;
+
+    ctx.shadowOffsetX = offset;
+    ctx.shadowOffsetY = offset;
+    ctx.shadowBlur = radius * 1;
     ctx.shadowColor = `rgba(${color},${0.2 * intensity})`;
 
     this.ctx.beginPath();
-    this.ctx.fillStyle =`rgba(${color},${0.2 * intensity})`;
-    //this.ctx.arc(pos.x - offset, pos.y - offset, radius, 0, Math.PI * 2);
-    this.ctx.rect(pos.x, pos.y, radius * 2, radius*2);
+    this.ctx.fillStyle =`rgba(555,0,0,1)`;
+    this.ctx.arc(pos.x - offset, pos.y - offset, radius, 0, Math.PI * 2);
     this.ctx.fill();
+
   }
 
   clear(){
@@ -109,6 +138,7 @@ export default class WaterTexture {
     this.ctx.fillRect(0,0,this.canvas.width, this.canvas.height);
   }
 
+  /*
   update(){
     this.clear();
     let agePart = 1. / this.maxAge;
@@ -129,6 +159,21 @@ export default class WaterTexture {
         this.drawPoint(point);
     });
 
+    this.texture.needsUpdate = true;
+  }*/
+
+  update(){
+    this.clear();
+    
+    this.points.forEach((point,i) => {
+        point.age += 1;
+        if(point.age > this.maxAge){
+            this.points.splice(i, 1);
+        }
+    });
+    this.points.forEach(point => {
+        this.drawPoint(point);
+    });
     this.texture.needsUpdate = true;
   }
 }

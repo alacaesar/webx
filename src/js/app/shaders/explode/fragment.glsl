@@ -25,7 +25,7 @@ void main()	{
 	float alpha = 1. - clamp(0.,1.,abs(vPos.z/900.));
 
 	gl_FragColor = finalTex;
-	gl_FragColor.a *= mask.r * alpha;
+	gl_FragColor.a *= mask.r * alpha * 1.;
 
 }
 

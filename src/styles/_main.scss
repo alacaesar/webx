@@ -22,6 +22,7 @@ canvas#WaterTexture{
   bottom: 0;
   left: 0;
   z-index: 10;
+  border: 1px solid tomato;
 }
 
 .detector{
@@ -58,15 +59,18 @@ canvas#WaterTexture{
   top: 80.5%;
   z-index: 9;
   color: white;
-  // top:150px;
+
+  top:250px;
+  left: 250px;
 }
 
 $anim-font-size: 2.1vw;
+$anim-font-size: 6vw;
 
 .anim {
   padding: 10px 0;
   font-size: $anim-font-size;
-  line-height: 124%;
+  line-height: 120%;
 
   .word{
     white-space: nowrap;
@@ -85,7 +89,7 @@ $anim-font-size: 2.1vw;
       line-height: 0;
     }
     &.aa span svg{
-      height: calc($anim-font-size * 1.2);
+      height: calc($anim-font-size * 1.14);
       width: auto;
     }
 
@@ -108,10 +112,19 @@ $anim-font-size: 2.1vw;
   &:nth-child(5){ left:44.0% ; top: 75.9%; }
   &:nth-child(6){ left:82.8% ; top: 75.9%; }
 
+  .overlay.processing &:nth-child(1){ left:5.2% ; top: 9.25%; }
+  .overlay.processing &:nth-child(2){ left:50.0% ; top: 9.25%; }
+  .overlay.processing &:nth-child(3){ left:94.0% ; top: 9.25%; }
+  .overlay.processing &:nth-child(4){ left:5.2% ; top: 90.0%; }
+  .overlay.processing &:nth-child(5){ left:50.0% ; top: 90.0%; }
+  .overlay.processing &:nth-child(6){ left:94.0% ; top: 90.0%; }
+
   &.flash{
     animation-name: flash;
     animation-duration: .5s;
   }
+
+  display: none;
 }
 
 @keyframes flash{
@@ -129,13 +142,62 @@ $anim-font-size: 2.1vw;
   position: absolute;
   left: 82.8%;
   top: 80.5%;
+
+  .overlay.processing &{
+    top: 19.25%;
+    left: 50%;
+    font-size: .6vw;
+  }
 }
 
 .definition{
-  font-size: .8vw;
+  font-size: .9vw;
   line-height: 120%;
   position: absolute;
   left: 44.0%;
   top: 80.5%;
   width: 16vw;
+
+  .overlay.processing &{
+    opacity: 0;
+  }
+}
+
+.definition {
+  padding: 10px 0;
+
+  .word{
+    white-space: nowrap;
+  }
+
+  .letter{
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+
+    span {
+      display: block;
+      padding-bottom: 1px;
+    }
+  }
+}
+
+.input{
+  font-family: 'Space Mono', monospace;
+  font-size: .6vw;
+  line-height: 140%;
+  position: absolute;
+  left:5.2% ;
+  top: 19.25%;
+  width: 12vw;
+  display: none;
+
+  .overlay.processing &{
+    display: block;
+  }
+
+}
+
+.dg.ac{
+  z-index: 11;
 }
