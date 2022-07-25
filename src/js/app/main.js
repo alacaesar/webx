@@ -29,8 +29,6 @@ import WaterTexture from './elements/waterTexture';
 
 let current = 0;
 
-let k = 0;
-
 export default class Main {
   constructor(container) {
 
@@ -121,17 +119,19 @@ export default class Main {
     .then(data => {
       vars.data = data;
 
-      // _this.explode = new Explode();
+      _this.explode = new Explode();
       _this.overlay = new Overlay(document.querySelector(".overlay"));
-      //_this.waterTexture = new WaterTexture({ debug: true });
+      _this.waterTexture = new WaterTexture({ debug: false });
+      /*
       _this.faceDetector = new FaceDetector({onResults:(point)=>{
-        //_this.waterTexture.addPoint(point);
+        _this.waterTexture.addPoint(point);
       }});
-      //_this.faceDetector.init();
+      _this.faceDetector.init();
+      */
       
 
       vars.loopFunctions.push([(time) => {
-        //_this.waterTexture.update();
+        // _this.waterTexture.update();
       }, "ANIMATE_OBJECTS"]);
       
     });
@@ -142,27 +142,11 @@ export default class Main {
     // this.font.write("[t1][o1][o2] muc[h2] te[c1]h[n1]o[l1]ogy[tm] a[l1][a2]a al[n1]uai[m1]i");
     // this.font.write("blo[c1]kc[h1]ain");
     // this.font.write("a[a1][a2][a3][a4]b[b1]c[c1]d[d1][d2]e[e1][e2] fgh[h1][h2]i[i1]jk[k1]l[l1]m[m1][m2]n [n1]o[o1][o2][o3][o4]p[p1]q[q1]r[r1]s[s1] t[t1][t2]u[u1][u2][u3]vw[w1][w2]x[x1][x2] [x3]y[y1]z./?0123456789[tm]");
-
-    this.k = 0;
   }
 
   onTriggerClick(){
-
-    let s = [
-      "[x1]",
-      "[u2]",
-    ]
-
     let _this = vars.main;
-    // _this.font.animate();
-    // _this.overlay.font.write("blo[c1]kc[h1]ain");
-    _this.overlay.font.write("[d2]ef[i1]");
-    _this.overlay.font.write(s[k]);
-    k++;
-    // _this.overlay.font.write("w[w1][w2]");
-    _this.overlay.font.write("a[l1][a2]a al[n1]uai[m1]i");
-    // _this.overlay.font.write("a[a1][a2][a3][a4]b[b1]c[c1]d[d1][d2]e [e1][e2]fgh[h1][h2]i[i1]jk[k1]l[l1]m [m1][m2]n[n1]o[o1][o2][o3][o4]p[p1] q[q1]r[r1]s[s1]t[t1][t2]u[u1][u2][u3] vw[w1][w2]x[x1][x2][x3]y[y1]z./ ?0123456789[tm]");
-    // _this.overlay.font.write("[a1][a2][a3][a4][b1][c1][d1][d2] [e1][e2][h1][h2][i1][k1][l1][m1][m2] [n1][o1][o2][o3][o4][p1][q1] [r1][s1][t1][t2][u1][u2][u3][w1] [w2][x1][x2][x3][y1][tm]");
+    // do nothing
   }
 
   onTransitionClick(){

@@ -39,25 +39,9 @@ export default class Explode {
 
     const _this = this;
 
-    const axesHelper = new THREE.AxesHelper( 500 );
-    //this.scene.add( axesHelper );
+    this.mouseVector = new THREE.Vector3({x:0,y:0,z:0});
 
-    this.raycaster = new THREE.Raycaster();
-    this.mouseVector = new THREE.Vector3();
-
-    vars.mouseMoveFunctions.push([(point) => {
-
-      _this.raycaster.setFromCamera(point, vars.main.camera.threeCamera);
-
-      let intersects = _this.raycaster.intersectObjects([_this.plane]);
-      if(intersects.length > 0){
-        let point = intersects[0].point;
-        _this.ball.position.copy(point);
-        _this.mouseVector.copy(point);
-      }
-
-      // do nothing
-    }, "DRAW_RIPPLES"]);
+    this.initTextrueBasedEvents();
     
     vars.loopFunctions.push([(time) => {
       _this.time++;
@@ -68,6 +52,42 @@ export default class Explode {
       _this.material.uniforms.uMouse.value = _this.mouseVector;
     }, "ANIMATE_OBJECTS"]);
   }
+
+  initTextrueBasedEvents(){
+    const _this = this;
+
+    vars.mouseMoveFunctions.push([(point) => {
+
+      point.z = 0;
+      _this.mouseVector.copy(point);
+      
+    }, "DRAW_RIPPLES"]);
+
+  }
+
+  initRaycasterBasedEvents(){
+    const _this = this;
+
+    this.raycaster = new THREE.Raycaster();
+    
+
+    vars.mouseMoveFunctions.push([(point) => {
+
+      _this.raycaster.setFromCamera(point, vars.main.camera.threeCamera);
+
+      let intersects = _this.raycaster.intersectObjects([_this.plane]);
+      if(intersects.length > 0){
+        let point = intersects[0].point;
+        // _this.ball.position.copy(point);
+        _this.mouseVector.copy(point);
+      }
+
+      // do nothing
+    }, "DRAW_RIPPLES"]);
+
+  }
+
+
 
   initGraphics() {
     const _this = this;

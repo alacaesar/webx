@@ -19,7 +19,8 @@ export default class WaterTexture {
     }
 
     this.init();
-    if(options.debug) document.body.append(this.canvas);
+    //if(options.debug) document.body.append(this.canvas);
+    document.body.append(this.canvas);
 
   }
 

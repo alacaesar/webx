@@ -86,12 +86,12 @@ void main() {
   
   vec3 stable = position;
   float direction = 1.;
-  float press = tex.r * 0.01 + 0.01;ç
+  float press = tex.r * 0.01 + 0.01;
   if(tex.r > 0.5){
     direction = -1.;
   }
   float distanceToPoint = distance(stable.xy, uMouse.xy);
-  float area = 1. - smoothstep(0.,300.,distanceToPoint);
+  float area = 1. - smoothstep(0.,50.,distanceToPoint);
   stable.z += 50. * sin(time*press)*direction*area * distortion;
   stable.y += 50. * sin(time*press)*direction*area * distortion;
   stable.z += 100. * cos(time*press)*direction*area * distortion;
